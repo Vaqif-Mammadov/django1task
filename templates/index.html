@@ -1,0 +1,25 @@
+{%load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filmler</title>
+    <link rel="stylesheet" href={%static "style.css" %}>
+</head>
+<body>
+    <h1>Filmler</h1>
+    <ul>
+        {% for i in article %}
+        <li>
+            <h4> {{i.title}} </h4>
+            <h4> {{i.genre}} </h4>
+            <h4> {{i.score}} </h4>
+            <p> {{i.about}} </p>
+            <img src="/Media/{{i.image}}" alt="sekil">            
+        </li>
+        <!-- <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsam molestias voluptate laboriosam libero asperiores blanditiis eligendi repellendus, officiis pariatur. Eligendi dolores obcaecati non quo magnam, incidunt quidem nulla maiores. Necessitatibus excepturi aspernatur ducimus tempora, odit culpa temporibus delectus nesciunt libero praesentium sapiente voluptatibus similique reiciendis cupiditate doloremque unde, earum facilis accusamus voluptatum molestiae expedita itaque eligendi doloribus et. Eos tempore corrupti modi, deleniti minima aliquid quidem iste odio ipsum vitae ullam asperiores? Reiciendis id assumenda eligendi mollitia provident minus vitae earum ratione ipsam dolor fugit distinctio esse, sint consequuntur porro eum, officia suscipit est asperiores omnis! Veniam laudantium doloremque eius?</p> -->
+        {%endfor %}
+    </ul>
+</body>
+</html>
